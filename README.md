@@ -83,3 +83,44 @@
 9. ```I used a string for the census year. It seems like one way of using the data isn't better than another. Looking up population of a zip code over time would require several querries, as would looking up population of all zip codes over time. However, looking up population of all zip codes over time would be cumbersome if all zip codes in the US were included in the dictionary.```
 
 10. ```Using my data model, the values that comprise the data could be formatted according to the ISO 8601 standard. After all, the data stored in a dictionary is unordered anyway.```
+
+## Answers for "data structures" below
+
+1. ```In [1]: libraryBook = {"J. R. Tolken": ["Fellowship of the Rings", "The Two Towers", "The Return of the King"], "Arthur C. Clark": ["2001", "2010", "3001"]}
+In [2]: libraryBook
+Out[2]:
+{'Arthur C. Clark': ['2001', '2010', '3001'],
+ 'J. R. Tolken': ['Fellowship of the Rings',
+  'The Two Towers',
+  'The Return of the King']}```
+
+2. ```In [6]: pointsXY = {1: [3 ,5], 2: [7, 3], 3: [5, 1]}
+In [8]: pointsXY
+Out[8]: {1: [3, 5], 2: [7, 3], 3: [5, 1]}```
+
+3. ```In [3]: profiles = {"Michelle": ["married", 36, "rice", "san antonio"], "Jason": ["single", 40, "utsa", "houston"]}
+In [5]: profiles
+Out[5]:
+{'Jason': ['single', 40, 'utsa', 'houston'],
+ 'Michelle': ['married', 36, 'rice', 'san antonio']}```
+
+4. ```In [9]: chessBoard = {1:[1,2,3,4,5,6,7,8], 2:[1,2,3,4,5,6,7,8], 3:[1,2,3,4,5,6,7,8]}
+In [10]: chessBoard
+Out[10]:
+{1: [1, 2, 3, 4, 5, 6, 7, 8],
+ 2: [1, 2, 3, 4, 5, 6, 7, 8],
+ 3: [1, 2, 3, 4, 5, 6, 7, 8]}```
+
+ 5. ```In [12]: inmates = {1401:["Bob", "A1", 209, "blue"], 1402:["Tom", "C3", 175, "brown"]}
+In [13]: inmates
+Out[13]: {1401: ['Bob', 'A1', 209, 'blue'], 1402: ['Tom', 'C3', 175, 'brown']}```
+
+6. ```To remove "Fellowship of the Rings" use: del libraryBook["J. R. Tolken"][0]. To add it back use: libraryBook["J. R. Tolken"][2] = "Fellowship of the Rings"```
+
+7. ```To tell if a point is in pointsXY use: 1 in pointsXY```
+
+8. ```I used a dictionary for my social media profile data and dictionary keys must be unique, thus there would have to be a way to modify the names of two people with the same name to make them unique. Then use the unique name as a key```
+
+9. ```Since I used a dictionary to make my chessBoard, it does not suffer from the "mutable presto-chango" mentioned in the article.```
+
+10. ```To remove inmate Bob use: del inmates[1401].```
